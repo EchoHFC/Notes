@@ -44,4 +44,19 @@ daunting：令人生畏的，令人气馁的
 
 muster up：振作
 
+# What happened when we all stopped
+
+stay tuned：敬请关注
+
+tenacious：顽强的，坚韧的
+
+hail：冰雹
+
+prevail：普遍存在、盛行、流行
+
+breaking new ground, seeds rolling down：开垦土地，精心播种
+
+no time for sorrow，we are building tomorrow：没有时间伤感颓废，我们在未来准备
+
+
 
