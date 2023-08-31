@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+<title>HDP.html</title>
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8"/>
+
+</head>
+
+<body>
+
+[WARNING] Could not convert TeX math '
+  G = \sum_{k=1}^\infty \beta_k \delta_{\phi_K}
+  ', rendering as TeX
+[WARNING] Could not convert TeX math '
+  \begin{aligned}
+  G_0\mid \gamma,H &\sim \text{DP}(\gamma,H)\\
+  G_j\mid \alpha_0,G_0\mid &\sim \text{DP}(\alpha_0,G_0)
+  \end{aligned}
+  ', rendering as TeX
+<h2 id="hierarchical-dirichlet-process">Hierarchical Dirichlet Process</h2>
+<h3 id="introduction">Introduction</h3>
+<p>狄利克雷过程<span class="math inline">DP(<em>α</em><sub>0</sub>, <em>G</em><sub>0</sub>)</span>是测度上的测度。它有两个参数，一个<em>scaling</em>参数<span class="math inline"><em>α</em><sub>0</sub> &gt; 0</span>和一个基概率测度(base probability measure)<span class="math inline"><em>G</em><sub>0</sub></span>。一个具体的表示从狄利克雷过程中采样的是Sethuranma， 他证明了如果<span class="math inline"><em>G</em> ∼ DP(<em>α</em><sub>0</sub>, <em>G</em><sub>0</sub>)</span>，那么以概率<span class="math inline">1</span>： <br /><span class="math display">$$
+G = \sum_{k=1}^\infty \beta_k \delta_{\phi_K}
+$$</span><br /> 其中<span class="math inline"><em>ϕ</em><sub><em>k</em></sub></span>为服从<span class="math inline"><em>G</em><sub>0</sub></span>的独立同分布，其中“stick-breaking weights”<span class="math inline"><em>β</em><sub><em>k</em></sub></span>依赖于参数<span class="math inline"><em>α</em><sub>0</sub></span>。</p>
+<p>让我们考虑我们的数据被分为一定数量的组(groups)的情况。给定我们在每一个组内进行聚类的问题，我们考虑一系列的随机测度<span class="math inline"><em>G</em><sub><em>j</em></sub></span>，其中<span class="math inline"><em>G</em><sub><em>j</em></sub></span>来自于一个group-specific狄利克雷过程<span class="math inline">DP(<em>α</em><sub>0<em>j</em></sub>, <em>G</em><sub>0<em>j</em></sub>)</span>。 为了将这些聚类问题连接起来，我们将group-specific狄利克雷过程链接起来。通过<span class="math inline"><em>G</em><sub>0<em>j</em></sub></span>，一个自然的方法是分层， 认为<span class="math inline"><em>G</em><sub><em>j</em></sub></span>是从单个狄利克雷过程<span class="math inline">DP(<em>α</em><sub>0</sub>, <em>G</em><sub>0</sub>(<em>τ</em>))</span>中抽样得到的，其中<span class="math inline"><em>G</em><sub>0</sub>(<em>τ</em>)</span>是以随机参数<span class="math inline"><em>τ</em></span>为参数的参数分布。 对<span class="math inline"><em>τ</em></span>积分引入了DP之间的依赖关系。</p>
+<p>但是这样仍然不能解决我们的问题。因为虽然<span class="math inline"><em>G</em><sub><em>j</em></sub></span>都是从<span class="math inline">DP</span>中抽样得到的，但是每个<span class="math inline"><em>G</em><sub><em>j</em></sub></span>中仍然不会存在相同的元素。我们对此的解决方法也很简单，我们假设<span class="math inline"><em>G</em><sub>0</sub></span>来自 一个新的狄利克雷过程<span class="math inline">DP(<em>γ</em>, <em>H</em>)</span>，这样<span class="math inline"><em>G</em><sub>0</sub></span>也为一个离散的分布，我们的问题就解决了。这就是分层狄利克雷过程： <br /><span class="math display">$$
+\begin{aligned}
+G_0\mid \gamma,H &amp;\sim \text{DP}(\gamma,H)\\
+G_j\mid \alpha_0,G_0\mid &amp;\sim \text{DP}(\alpha_0,G_0)
+\end{aligned}
+$$</span><br /></p>
+
+</body>
+</html>

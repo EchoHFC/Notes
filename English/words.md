@@ -58,5 +58,3 @@ breaking new ground, seeds rolling down：开垦土地，精心播种
 
 no time for sorrow，we are building tomorrow：没有时间伤感颓废，我们在未来准备
 
-
-
